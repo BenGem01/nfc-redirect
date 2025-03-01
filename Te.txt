@@ -1,0 +1,464 @@
+\documentclass[parskip=half, DIV=classic/calc, BCOR=1cm, fontsize=12pt, titlepage=true, twoside, caption=tableabove]{scrartcl}
+
+\usepackage{polyglossia}
+\setdefaultlanguage[babelshorthands=true]{german} %macht Trennstrichsprache Deutsch
+\setmainfont{arial}
+\usepackage[autostyle=true, german=quotes]{csquotes}	%normal deutsch quotes ""
+\usepackage{setspace}
+\usepackage[]{blindtext}
+
+\usepackage{xcolor}
+
+\setkomafont{section}{\underline}
+\setkomafont{subsection}{\textcolor{blue}}
+
+
+\usepackage[]{scrlayer-scrpage}
+\pagestyle{scrheadings}
+
+%\lohead{lohead}
+%\lehead{lehead}
+%\ifoot{ifoot}
+
+\automark[subsection]{section}
+\cohead{\rightmark}
+\lehead{\leftmark}
+
+\rofoot{\pagemark}
+
+\titlehead{Kopflinks}
+\subject{Anlass}
+\title{Titel}
+\subtitle{Subtitel}
+\author{Me}
+\date{\today}
+\publishers{Me}
+
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage[locale=DE]{siunitx}
+\usepackage{nicefrac}
+
+\usepackage[locale=DE, per-mode=fraction]{siunitx}
+
+
+\usepackage{booktabs} 
+\usepackage{multirow}
+
+\usepackage{enumitem}
+
+\usepackage{graphicx}
+
+\usepackage{caption}
+
+\usepackage[]{subcaption}
+
+
+\usepackage[backend=biber, style=numeric]{biblatex}
+\addbibresource{bibo.bib}
+
+
+\usepackage[]{graphicx}
+
+
+
+%nur als letztes ind er reihenfolge:
+\usepackage[]{hyperref}
+\usepackage[]{cleveref}
+%Präambel
+
+\begin{document}
+	
+	%\maketitle
+	\begin{titlepage}
+		Martin-Luther Universität
+		\vfill \centering % Schieben und Zentrieren
+		\Large \bfseries % Text-Formatierung
+		Sehr interessant
+		
+		\bigskip \Huge % Abstand und Formatierung
+		Ein interessanter Text über ein noch interessanteres Thema
+		
+		\bigskip \normalsize % Abstand und Formatierung
+		Ist es wirklich interessant?
+		
+		\bigskip \normalfont \large
+		Der Autor\footnote{mein Name}
+		
+		\bigskip \today % Datum
+		
+		\vfill % Vertikal Schieben
+		Leitender Betreuer: Prof.\,Dr. L.\,...
+		
+	\end{titlepage}
+	
+	
+	\setcounter{page}{1}
+	\renewcommand{\thepage}{\Roman{page}}
+	\tableofcontents
+	
+	\newpage
+	\setcounter{page}{1}
+	\renewcommand{\thepage}{\arabic{page}}
+	\section{test}
+	
+	
+	
+	
+	
+	
+	
+	\huge hallo welt!
+	\normalsize
+	
+	Dieser Text steht im Dokument % aber dieser Text nicht mehr
+	\textbf{Befehl wird ausgeführt} % \textbf{Befehl ignoriert}
+	
+	
+	Ein \enquote{Zitat} und ein \enquote*{Zitat}.
+	
+	
+	ich bin ein Bindestrich kurz -
+	
+	ich binlang --
+	
+	mega lang ---
+	
+	
+	
+	\textit{krusivWTF}
+	
+	Dieser Text ist nicht kursiv. \itshape Dieser Text ist kursiv.
+	\normalfont Dieser nachfolgende Text ist nicht mehr kursiv
+	
+	
+	
+	
+	Hallo dies ist ein mehr \\ 
+	zeiliger Text der durch newline \newline 
+	und durch ein linebreak \linebreak 
+	unterbrochen wird
+	
+	Das ist ein Langer Text mit Rechtschreibfehlern, welcher aber ganz ohne Pizza auskommt. Denn da es Nachts költer ist als draußen, wächst im Wald auch schneller ein Haus als auf einer Wolke.
+	ABA\,BAB~AB
+	
+	
+	
+	neuer absatz \\
+	%\Blinddocument
+	
+	
+	\section{übung4}
+	\subsection{text Schalter}
+	
+	Nur \Large KÖNIGE\normalsize, HERAUSGEBER und \itshape Leute mit Bandwurm \normalfont dürfen das editorische „\textbf{wir}“ verwenden. \itshape Ihre Diplomarbeit, Masterarbeit oder Bachelorarbeit \normalfont schreiben Sie allein, also nutzen Sie die erste Person \tiny Singular oder besser\normalsize \ttfamily schreiben Sie doch einfach im Passiv! \normalfont Das sollte reichen.
+	
+	\subsection{farben-schriftart}
+	
+	\textcolor{green}{WTF}
+
+	\definecolor{RGBtest}{RGB}{50, 100, 255}
+	\definecolor{cmyktest}{cmyk}{0.3, 0.5, 0.7,0.3}
+	\textcolor{RGBtest}{\Huge Nice Color}
+	
+	\textcolor{cmyktest}{\Huge DAS ist ein TEST}
+	
+	\newpage
+	
+	\section{Kolumnentitel}
+	
+
+
+	\section{Mathesatz}
+	
+	Dies ist ein toller Text, den jedes Kind weiß ja, dass $3 \cdot 3 =9 $ ist. Des weiteren sollte jedem klar sein, dass $\sqrt[]{9} =3$ ist. Das macht ja eigentlich auch nur Sinn.
+	
+	
+	$3+3^2 \cdot 3 = x$
+	
+	\begin{math}
+		3+312^1 \cdot 59
+	\end{math}
+	
+	\begin{equation}
+		3+312^1 \cdot 59
+	\end{equation}
+	
+		\begin{equation*}
+		3+312^1 \cdot 59
+	\end{equation*}
+	
+	
+	\begin{gather}
+		3+3 \cdot 2 = 9 = \beta\\
+		a \times b \\
+		a \div b \\
+		\dfrac{a}{b^2} \tag*{Bruch} \\
+		\frac{a}{b^2} \\
+		\nicefrac[]{a}{b^2} \notag \\
+		\sqrt{9} = 3 \\
+		\sqrt[2]{9!} 
+	\end{gather}
+	
+	
+	\begin{align}
+		x &= 20 - 5 \cdot 5\\
+		&= 20 - 25 \\
+		&=-5
+	\end{align}
+	
+	\begin{align}
+		\zeta	&= 20 - 5 \cdot 5 	& \beta	&=6-4 	&\alpha &=5\div 3 \\ 
+			&= 20 - 25 			&	&=4-2 	&& \approx 2\\
+			&=-5 				&	&=2
+	\end{align}
+
+
+	\begin{gather}
+	\text{Kreuzprodukt:} \mathbf{a\times b}= \sum_{i,j,k=1}^{3}\varepsilon_{ijk}a_ib_j \mathrm{e_k} \\
+	\text{und chemische Formeln: }
+\end{gather}
+
+
+\section{Einheiten}
+
+\qty[per-mode=fraction]{4}{kj/mol^3} \\
+\num{4}		\\
+\unit[]{km/s}	\\
+\ang{69;45;2}	\\
+\qty{345}{\kg\per\meter\tothe{78}}
+
+\section{Tabellen}
+
+\begin{tabular}{l|c}
+	\hline
+	Giraffe & Affe \\
+	\hline
+	Pferd & $\dots$ \\
+	\hline
+\end{tabular}
+
+\begin{tabular}{r|l || c @{ $\to$ } p{2cm}|} % bis 4 Spalten!
+	Hibiskus & Krokusse & Laub & Birke \\
+	\hline
+	Orchideenartige & Tulpe & Nadelbaum & Fichte \\
+\end{tabular}
+
+\begin{tabular}{| c | c | r l c c @{$\to$}r |}
+	\midrule
+	1 & 2 & 3 & 4 & 5 & 6 & 7 \\
+	\midrule
+	A & B & \multicolumn{2}{c}{C     D} & E & F & G\\
+	\cmidrule{1-2} \cmidrule{5-6}
+	a & b & c & d & e & f & g\\
+	\midrule
+\end{tabular}
+\\
+\\
+\\
+\begin{tabular}{l|l}
+	\toprule
+	% Definition Tabellenkopf ändern
+	\multicolumn{1}{c}{\textbf{Obst}} &	\multicolumn{1}{c}{\textbf{Gemüse}} \\
+	\midrule
+	Mango 		& Brokkoli \\
+	Aprikose 	& Kohl \\
+	% Doppelspalte
+	\multicolumn{2}{c}{Was ist mit Rhababer?} \\
+	& \multicolumn{1}{r}{Kekse ?} \\
+	\bottomrule
+\end{tabular}
+\\
+\begin{tabular}{l|c|r}
+	Links 	& 	Mitte 	& Rechts \\
+	\midrule
+	\multirow{2}{*}{2 Zeilen}
+			&	X 		& Text \\
+			& Y 		& \multirow{2}{2cm}
+							{Noch viel mehr Text} \\
+	42 		& 	Z 		& %kein Platz
+\end{tabular}
+
+
+
+\subsection{Listen}
+ \begin{itemize}
+ 	\item Erstens
+ 	\item und
+ 	\item zweitens
+ 	\begin{itemize}
+ 		\item unterliste
+ 		\begin{itemize}
+ 			\item unterunterliste
+ 		\end{itemize}
+ 	\end{itemize}
+ 	\item[-] Strich 
+ \end{itemize}
+
+
+
+ \begin{enumerate}
+ 	\item erstens
+ 	\item zweitens
+ 	\item drittens
+ \end{enumerate}
+
+\begin{itemize}[label= $\bullet$]
+	\item erstens
+	\item zweitens
+\end{itemize}
+
+
+\subsection{Bilder}
+
+\begin{center}
+	%
+	\includegraphics[width=\linewidth]%
+	{Bilder/Bild1.png}
+	%
+\end{center}
+
+
+\begin{figure}[tb]
+	\centering %zentrieren
+	\includegraphics[width=.85\linewidth]{Bilder/Bild1.png}
+	\caption{Franke}
+	\label{fig:franke}
+\end{figure}
+
+In Abb. \ref{fig:franke} ist ein hallesches Gebäude zu sehen,
+welches bedeutenden Anteil an der Stadtgeschichte hat.
+
+\begin{figure}[tb] %Gleitumgebung
+	\centering
+	\begin{subfigure}{0.3\linewidth} % Breite angeben!
+		\centering
+		\includegraphics[height=0.2\textheight]{Bilder/Bild1.png}
+		\caption{franke} % Einzelbeschriftung
+	\end{subfigure}
+	\hfill % KEINE LEERZEILE LASSEN! --------------------------
+	\begin{subfigure}{0.3\linewidth} % Breite angeben!
+		\centering
+		\includegraphics[height=0.2\textheight]{Bilder/Bild2.png}
+		\caption{haus} % Einzelbeschriftung
+	\end{subfigure}
+	\caption{Beide -- franke und haus} % Gesamtbeschriftung
+\end{figure}
+
+
+\newpage
+\section{Boxen}
+
+\makebox{Text}
+\framebox[5cm][r]{text}
+
+\raisebox{-\height}{unter der Grundlinie}
+\\
+\\
+\\
+
+\parbox[c][][c]{5cm}{%
+	\rule{5cm}{1pt}
+	Datum, Unterschrift
+}
+\\
+\\
+
+\parbox[c][][c]{10cm}{
+\rotatebox{90}{Kopf gestellt}
+\makebox[2cm]{}
+}	
+
+
+\section{Zähler}
+
+
+\newpage
+\section{Verweise}
+	Dies ist ein Beispieltext mit einem Verweis Buch \cite{Buch1}
+	Dies ist ein Beispieltext mit einem Verweis Paper \cite{Paper1}	
+	Dies ist ein Beispieltext mit einem Verweis Online 1 \cite{Online1}
+	Dies ist ein Beispieltext mit einem Verweis Online 1 \cite{Online2}
+	
+		
+	Dies ist ein Beispieltext mit einem Verweis \fullcite{Buch1}
+	
+	Dies ist ein Beispieltext mit einem Verweis \footfullcite{Online1}
+	
+	Dies ist ein Beispieltext mit einem Verweis \autocite{Paper1}
+	
+	Dies ist ein Beispieltext mit einem Verweis \footcite{Buch1}
+	
+	Dies ist ein Beispieltext mit einem Verweis \parencite{Online2}
+	
+	Dies ist ein Beispieltext mit einem Verweis \textcite{Paper1}
+
+	Dies ist ein Beispieltext mit einem Verweis \nocite{Buch1}
+	
+\newpage
+
+	Dies ist ein Beispieltext mit einem Verweis Buch \cite{Buch1, Online1, Online2}
+	Dies ist ein Beispieltext mit einem Verweis Paper \cite{Paper1, Buch1}	
+	Dies ist ein Beispieltext mit einem Verweis Online 1 \cite{Online1}
+	Dies ist ein Beispieltext mit einem Verweis Online 1 \cite{Online2}
+
+
+\newpage
+\nocite{*}
+\printbibliography[notkeyword=Bild, title=Schrift]
+\printbibliography[keyword=Bild, title=Bild]
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
